@@ -1,0 +1,7 @@
+*********************************************
+Description : Change PHP version in linux 
+*********************************************
+
+sudo a2dismod php7.2
+sudo a2enmod php5.6
+sudo service apache2 restart
