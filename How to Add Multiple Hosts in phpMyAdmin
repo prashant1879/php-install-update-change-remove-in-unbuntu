@@ -1,0 +1,22 @@
+####################################################################
+How to Add Multiple Hosts in phpMyAdmin
+####################################################################
+
+cd /usr/share/phpmyadmin
+cp config.sample.inc.php config.inc.php
+vim config.inc.php
+
+#Now add the following entries at the end of the file.
+
+ $i++;
+ $cfg['Servers'][$i]['verbose'] = 'Database Server 2';
+ $cfg['Servers'][$i]['host'] = '192.168.1.102';
+ $cfg['Servers'][$i]['port'] = '';
+ $cfg['Servers'][$i]['socket'] = '';
+ $cfg['Servers'][$i]['connect_type'] = 'tcp';
+ $cfg['Servers'][$i]['extension'] = 'mysqli';
+ $cfg['Servers'][$i]['auth_type'] = 'cookie';
+ $cfg['Servers'][$i]['AllowNoPassword'] = false;
+ 
+ #After adding the above entries in the configuration file and access phpMyAdmin in a web browser and you will get an option of server choice.
+ #Select server name to which you need to connect.
