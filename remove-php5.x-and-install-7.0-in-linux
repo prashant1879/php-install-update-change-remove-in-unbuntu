@@ -2,7 +2,7 @@
 Description : Remove php5.x and install php7.0 
 ************************************************************************
 
-sudo apt-get install python-software-properties software-properties-commo
+sudo apt-get install python-software-properties software-properties-common
 
 sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
 
