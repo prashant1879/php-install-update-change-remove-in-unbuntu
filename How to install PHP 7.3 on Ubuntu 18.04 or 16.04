@@ -44,3 +44,14 @@ sudo chown username /var/www/html
 # Your account shouldn't have any more permission issues
 
 service apache2 restart
+
+
+****************
+if you install 5.6 with 7.3 then follow below step
+****************
+
+
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install php5.6
+apt-get install php-pear php5.6-curl php5.6-dev php5.6-gd php5.6-mbstring php5.6-zip php5.6-xml php5.6-mysqli php5.6-mcrypt
