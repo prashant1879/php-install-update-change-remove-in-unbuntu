@@ -1,2 +1,10 @@
 # if no password remove -p
 mysqldump -u root -p --all-databases > /var/www/html/backup_db/alldb.sql
+
+#store db
+mysql -u root -p < /var/www/html/prashant/dump.sql
+
+
+
+
+SELECT User FROM mysql.user;
