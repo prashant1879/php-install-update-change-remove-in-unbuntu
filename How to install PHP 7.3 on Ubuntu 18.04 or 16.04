@@ -23,7 +23,7 @@ sudo apt-get install phpmyadmin
 #if mysql version >= 5.7 and mysql only work with sudo then
 DROP USER 'root'@'localhost';
 CREATE USER 'root'@'%' IDENTIFIED BY '<password>';
-GRANT ALL PRIVILEGES ON . TO 'root'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 # Set group to www-data
