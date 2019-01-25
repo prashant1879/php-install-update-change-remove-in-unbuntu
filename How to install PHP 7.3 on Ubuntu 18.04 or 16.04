@@ -5,7 +5,8 @@ How to install PHP 7.3 on Ubuntu 18.04 or 16.04
 #Update Ubuntu
 apt-get update && apt-get upgrade
 
-#Add the PHP repository
+sudo apt-get install apache2
+
 apt-get install software-properties-common
 
 add-apt-repository ppa:ondrej/php
@@ -14,11 +15,32 @@ apt-get update
 
 apt-get install php7.3
 
-php -v
-
 apt-get install php-pear php7.3-curl php7.3-dev php7.3-gd php7.3-mbstring php7.3-zip php7.3-mysql php7.3-xml
 
+# Install PHPMyAdmin
+sudo apt-get install phpmyadmin
+
+#if mysql version >= 5.7 and mysql only work with sudo then
+DROP USER 'root'@'localhost';
+CREATE USER 'root'@'%' IDENTIFIED BY '<password>';
+GRANT ALL PRIVILEGES ON . TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+# Set group to www-data
+sudo chgrp www-data /var/www/html
+
+# Make it writable for the group
+sudo chmod 775 /var/www/html
+
+# Set GID to www-data for all sub-folders
+sudo chmod g+s /var/www/html
+
+# Add your username to www-data group
+sudo usermod -a -G www-data username
+
+# Finally change ownership to username
+sudo chown imobdev-manish /var/www/html
+
+# Your account shouldn't have any more permission issues
+
 service apache2 restart
-
-
-
