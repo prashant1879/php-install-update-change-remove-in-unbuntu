@@ -4,7 +4,13 @@ mysqldump -u root -p --all-databases > /var/www/html/backup_db/alldb.sql
 #store db
 mysql -u root -p < /var/www/html/prashant/dump.sql
 
-
-
-
 SELECT User FROM mysql.user;
+
+########################
+#if remove mysql complate 
+
+sudo apt-get purge mysql-server-* mysql-client-*
+
+#install latest version of mysql-server
+sudo apt-get install mysql-server mysql-client
+########################
