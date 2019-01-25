@@ -39,7 +39,7 @@ sudo chmod g+s /var/www/html
 sudo usermod -a -G www-data username
 
 # Finally change ownership to username
-sudo chown imobdev-manish /var/www/html
+sudo chown username /var/www/html
 
 # Your account shouldn't have any more permission issues
 
