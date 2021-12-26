@@ -1,0 +1,20 @@
+
+sudo usermod -aG www-data yourUserName
+
+groups yourUserName
+
+
+You should get something like:
+
+youUserName : youUserGroupName www-data
+
+chown yourUserName:www-data -R youWebSiteFolder/wp-content/*
+
+
+cd youWebSiteFolder/wp-content
+
+find . -type d -exec chmod -R 775 {} \;
+
+find . -type f -exec chmod -R 664 {} \;
+
+
